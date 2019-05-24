@@ -26,3 +26,5 @@ export default class CardBack extends Component {
     )
   }
 }
+
+export default CardBack

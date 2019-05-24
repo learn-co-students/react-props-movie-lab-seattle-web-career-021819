@@ -9,3 +9,5 @@ export default class CardFront extends Component {
     )
   }
 }
+
+export default CardFront
