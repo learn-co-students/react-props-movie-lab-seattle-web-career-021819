@@ -4,14 +4,24 @@ import movieData from './data.js'
 
 export default class MovieShowcase extends Component {
 
+  //Assignment forces the following syntax
+  //return movieData.map((data, index) => <MovieCard key={index} movie={data}/>)
+  //You can use the spread operator to shorten the syntax
+  //return movieData.map((data, index) => <MovieCard key={index} {...data})
+  //On MovieCard access to the data would read 
+  //this.props.poster
+  //this.props.title
+  //this.props.IMDBRating
+  //this.props.genres
   generateMovieCards = () => {
-    // map over your movieData array and return the correct 
+    return movieData.map((data, index) => <MovieCard key={index} {...data}/>)
+   
   }
 
   render() {
     return (
       <div id="movie-showcase">
-        {this.generateMovieCards()}
+        {this.generateMovieCards()} 
       </div>
     )
   }
